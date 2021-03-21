@@ -75,5 +75,5 @@ bool process_image(
         bottomRightY * mat.size().height
     );
 
-    return cv::imwrite(path, resizedMat);
+    return cv::imwrite(path, resizedMat, {cv::ImwriteFlags::IMWRITE_JPEG_QUALITY, 50, cv::ImwriteFlags::IMWRITE_JPEG_OPTIMIZE, 1}); //only support jpeg at the moment
 }
